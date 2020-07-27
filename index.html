@@ -16,6 +16,8 @@
     <link rel="stylesheet" href="css/owl.theme.default.min.css">
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/bootstrap-rtl.min.css">
+    <link rel="stylesheet" href="css/bootstrap-select.min.css">
+    <link rel="stylesheet" href="css/Linearicons.css">
     <link rel="stylesheet" href="css/all.min.css">
     <link rel="stylesheet" href="css/fonts.css">
     <link rel="stylesheet" href="css/main.css">
@@ -35,16 +37,17 @@
                     <i class="far fa-smile-beam"></i>
                     <p>مرحبا بكم في متجر ارزاق</p>
                 </div>
-                <ul class=" lang-list list-unstyled">
-                    <li>
-                        <span>الريال السعودي</span>
-                        <i class="fas fa-sort-down"></i>
-                    </li>
-                    <li>
-                        <span>العربية</span>
-                        <i class="fas fa-sort-down"></i>
-                    </li>
-                </ul>
+                <div class="lang-list">
+                    <select class="selectpicker" data-width="fit"> 
+                        <option>الريال السعودي</option>
+                        <option> الجنيه المصري</option>
+                        <option>الدولار الأمريكي</option>
+                    </select>
+                    <select class="selectpicker" data-width="fit"> 
+                        <option>العربية</option>
+                        <option> الإنجليزية </option>
+                    </select>
+                </div>
             </div>
         </div>
     </div>
@@ -55,32 +58,44 @@
             <!-------------------- Header top Start ------------------->
             <div class="header-top">
                 <div class="row">
-                    <div class="logo col-md-3 col-xs-6">
-                        <img class="logo-img" src="images/logo/logo.png" alt="Arzaq Logo">
+                    <div class="col-md-3 col-xs-6">
+                        <a class="logo" href="#">
+                            <img class="logo-img" src="images/logo/logo.png" alt="Arzaq Logo">
+                        </a>
                     </div>
 
                     <div class="search col-md-6 hidden-sm hidden-xs">
                         <div class="search-bar">
-                            <button>
-                                    جميع الفئات 
-                                    <i class="fas fa-sort-down"></i>
-                                </button>
+                            <select class="selectpicker" data-width="fit" multiple title="جميع الفئات">
+                                <option>الاتصالات</option>
+                                <option>تقنية المعلومات</option>
+                                <option>منتجات الطبيعة</option>
+                                <option>إكسسوارات</option>
+                                <option>مستحضرات تجميل</option>
+                                <option>البخور والعطور</option>
+                                <option>الألعاب</option>
+                                <option>الملابس</option>
+                                <option>حقائب وأحذية</option>
+                                <option>أدوات منزلية</option>
+                                <option>المزرعة</option>
+                            </select>
                             <input type="text" placeholder="عن ماذا تبحث؟">
-                            <i class="fas fa-search fa-lg"></i>
+                            <a class="click-search" href="#"><i class="fas fa-search fa-lg"></i></a>
                         </div>
                     </div>
 
                     <div class="col-md-3 col-xs-6">
                         <div class="sign-up">
-                            <i class="user-config far fa-user fa-lg"></i>
-                            <span class="sign-in-up">دخول/تسجيل جديد</span>
-                            <ul class="list-unstyled">
-                                <li><span class="hidden-span"></span></li>
-                                <li><span class="hidden-span"></span></li>
-                                <li><span class="hidden-span"></span></li>
-                            </ul>
-                            <i class="shopping-cart fa fa-shopping-cart"></i>
-                            <span class="counter">0</span>
+                            <a class="config-link" href="#">
+                                <i class="user-config far fa-user fa-lg"></i>
+                                <span class="sign-in-up">دخول/تسجيل جديد</span>
+                            </a>
+                            <a href="#" class="search-button"><i class="fas fa-search fa-lg"></i></a>
+                            <a href="#" class="hidden-menu"><i class="fas fa-bars fa-lg"></i></a>
+                            <a class="shop-market" href="#">
+                                <i class="shopping-cart fa fa-shopping-cart"></i>
+                                <span class="counter">0</span>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -94,20 +109,15 @@
 
                         <!--start of hidden lists-->
                         <div class="parent">
-                            <div class="toggle-btn">
-                                <ul class="list-unstyled">
-                                    <li><span></span></li>
-                                    <li><span></span></li>
-                                    <li><span></span></li>
-                                </ul>
+                            <a class="toggle-btn" href="#">
+                                <i class="fas fa-bars fa-lg"></i>
                                 <p>جميع الفئات</p>
-                                <i class="fas fa-sort-down"></i>
-                            </div>
+                            </a>
 
                             <ul class="big-list list-unstyled">
                                 <li class="menu">
-                                    <i class="logo-icon fas fa-mobile-alt"></i>الاتصالات
-                                    <i class="arrow-left fas fa-caret-left"></i>
+                                    <i class="logo-icon fas fa-mobile-alt"></i>
+                                    <span class="span1">الاتصالات</span>
 
                                     <div class="menu-content">
                                         <!-- product section line one -->
@@ -115,7 +125,9 @@
                                             <p class="content-name">
                                                 الاتصالات
                                             </p>
-                                            <p class="show-more"> عرض الكل<i class="fas fa-chevron-left"></i></p>
+                                            <a class="show-link" href="#">
+                                                <p class="show-more"> عرض الكل</p>
+                                            </a>
                                         </div>
 
                                         <hr>
@@ -123,20 +135,20 @@
                                         <div class="menu-content-two">
 
                                             <ul class="parts list-unstyled">
-                                                <li>قسم فرعي 1</li>
-                                                <li>قسم فرعي 2</li>
-                                                <li>قسم فرعي 3</li>
-                                                <li>قسم فرعي 4</li>
-                                                <li>قسم فرعي 5</li>
-                                                <li>قسم فرعي 6</li>
+                                                <li><a href="#">قسم فرعي 1</a></li>
+                                                <li><a href="#">قسم فرعي 2</a></li>
+                                                <li><a href="#">قسم فرعي 3</a></li>
+                                                <li><a href="#">قسم فرعي 4</a></li>
+                                                <li><a href="#">قسم فرعي 5</a></li>
+                                                <li><a href="#">قسم فرعي 6</a></li>
                                             </ul>
                                             <ul class="parts list-unstyled">
-                                                <li>قسم فرعي 7</li>
-                                                <li>قسم فرعي 8</li>
-                                                <li>قسم فرعي 9</li>
-                                                <li>قسم فرعي 10</li>
-                                                <li>قسم فرعي 11</li>
-                                                <li>قسم فرعي 12</li>
+                                                <li><a href="#">قسم فرعي 7</a></li>
+                                                <li><a href="#">قسم فرعي 8</a></li>
+                                                <li><a href="#">قسم فرعي 9</a></li>
+                                                <li><a href="#">قسم فرعي 10</a></li>
+                                                <li><a href="#">قسم فرعي 11</a></li>
+                                                <li><a href="#">قسم فرعي 12</a></li>
                                             </ul>
                                             <div class="parts-img">
                                                 <img src="images/toggle down list/Layer 1121.png">
@@ -146,44 +158,44 @@
                                     </div>
                                 </li>
                                 <li>
-                                    <i class="logo-icon fas fa-wifi"></i>تقنية المعلومات
-                                    <i class="arrow-left fas fa-caret-left"></i>
+                                    <i class="logo-icon fas fa-wifi"></i>
+                                    <span>تقنية المعلومات</span>
                                 </li>
                                 <li>
-                                    <i class="logo-icon fas fa-leaf"></i>منتجات الطبيعية
-                                    <i class="arrow-left fas fa-caret-left"></i>
+                                    <i class="logo-icon fas fa-leaf"></i>
+                                    <span>منتجات الطبيعية</span>
                                 </li>
                                 <li>
-                                    <i class="logo-icon fas fa-cheese"></i>اكسسوارات
-                                    <i class="arrow-left fas fa-caret-left"></i>
+                                    <i class="logo-icon fas fa-cheese"></i>
+                                    <span>اكسسوارات</span>
                                 </li>
                                 <li>
-                                    <i class="logo-icon fas fa-paint-brush"></i>مستحضرات تجميل
-                                    <i class="arrow-left fas fa-caret-left"></i>
+                                    <i class="logo-icon fas fa-paint-brush"></i>
+                                    <span>مستحضرات تجميل</span>
                                 </li>
                                 <li>
-                                    <i class="logo-icon fas fa-spray-can"></i>البخور والعطور
-                                    <i class="arrow-left fas fa-caret-left"></i>
+                                    <i class="logo-icon fas fa-spray-can"></i>
+                                    <span>البخور والعطور</span>
                                 </li>
                                 <li>
-                                    <i class="logo-icon fas fa-gamepad"></i>الألعاب
-                                    <i class="arrow-left fas fa-caret-left"></i>
+                                    <i class="logo-icon fas fa-gamepad"></i>
+                                    <span>الألعاب</span>
                                 </li>
                                 <li>
-                                    <i class="logo-icon fas fa-tshirt"></i>الملابس
-                                    <i class="arrow-left fas fa-caret-left"></i>
+                                    <i class="logo-icon fas fa-tshirt"></i>
+                                    <span>الملابس</span>
                                 </li>
                                 <li>
-                                    <i class=" logo-icon fas fa-shopping-bag"></i>حقائب واحذية
-                                    <i class="arrow-left fas fa-caret-left"></i>
+                                    <i class=" logo-icon fas fa-shopping-bag"></i>
+                                    <span>حقائب واحذية</span>
                                 </li>
                                 <li>
-                                    <i class="logo-icon fas fa-broom"></i>أدوات منزلية
-                                    <i class="arrow-left fas fa-caret-left"></i>
+                                    <i class="logo-icon fas fa-broom"></i>
+                                    <span>أدوات منزلية</span>
                                 </li>
                                 <li>
-                                    <i class="logo-icon fas fa-paint-brush"></i>المزرعة
-                                    <i class="arrow-left fas fa-caret-left"></i>
+                                    <i class="logo-icon fas fa-paint-brush"></i>
+                                    <span>المزرعة</span>
                                 </li>
                             </ul>
                         </div>
@@ -193,12 +205,12 @@
 
                     <div class="col-xs-6">
                         <ul class="nav-list list-unstyled">
-                            <li>الرئيسية</li>
-                            <li>من نحن </li>
-                            <li>العروض</li>
-                            <li>وصل حديثا</li>
-                            <li>معلومات الشحن والتوصيل</li>
-                            <li>هل تحتاج مساعدة؟</li>
+                            <li><a href="#">الرئيسية</a></li>
+                            <li><a href="#">من نحن </a></li>
+                            <li><a href="#">العروض</a></li>
+                            <li><a href="#">وصل حديثا</a></li>
+                            <li><a href="#">معلومات الشحن والتوصيل</a></li>
+                            <li><a href="#">هل تحتاج مساعدة؟</a></li>
                         </ul>
                     </div>
 
@@ -206,7 +218,7 @@
                         <div class="hot-line">
                             <p>
                                 <i class="fas fa-phone-square fa-lg"></i> الخط الساخن
-                                <span>920000000</span>
+                                <a href="tel">920000000</a>
                             </p>
                         </div>
                     </div>
@@ -247,105 +259,113 @@
             <div class="owl-carousel owl-theme">
 
                 <div class="item">
-                    <div class="img-box">
+                    <a class="img-box" href="#">
                         <img src="images/Carousels/1.png" alt="product 1">
                         <span class="discount">خصم 10 %</span>
                         <span class="new">جديد</span>
-                    </div>
+                    </a>
                     <div class="text-box text-center">
-                        <p class="item-name">حذاء نايكي ريفولوشن 5 للنساء</p>
+                        <a class="item-name" href="#">حذاء نايكي ريفولوشن 5 للنساء</a>
                         <div class="price-box">
-                            <p class="item-price">180 ريال <span>220 ريال</span></p>
-                            <button class="add-to-cart"><i class="fa fa-shopping-cart"></i> أضف إلى السلة </button>
-                            <button class="heart"><i class="fa fa-heart" aria-hidden="true"></i></button>
+                            <a class="item-price" href="#">180 ريال <span>220 ريال</span></a>
+                            <a class="add-to-cart" href="#"><i class="fa fa-shopping-cart"></i> أضف إلى السلة </a>
+                            <a class="heart" href="#"><i class="fa fa-heart" aria-hidden="true"></i></a>
                         </div>
                     </div>
                 </div>
 
                 <div class="item">
-                    <div class="img-box">
+                    <a class="img-box" href="#">
                         <img src="images/Carousels/2.png" alt="product 2">
+                        <span class="discount">خصم 10 %</span>
                         <span class="new">جديد</span>
-                    </div>
+                    </a>
                     <div class="text-box text-center">
-                        <p class="item-name">حقيبة كروسبدي مبطنة</p>
+                        <a class="item-name" href="#">حذاء نايكي ريفولوشن 5 للنساء</a>
                         <div class="price-box">
-                            <p class="item-price">69 ريال </p>
-                            <button class="add-to-cart"><i class="fa fa-shopping-cart"></i> أضف إلى السلة </button>
-                            <button class="heart"><i class="fa fa-heart" aria-hidden="true"></i></button>
+                            <a class="item-price" href="#">69 ريال</a>
+                            <a class="add-to-cart" href="#"><i class="fa fa-shopping-cart"></i> أضف إلى السلة </a>
+                            <a class="heart" href="#"><i class="fa fa-heart" aria-hidden="true"></i></a>
                         </div>
                     </div>
                 </div>
 
                 <div class="item">
-                    <div class="img-box">
+                    <a class="img-box" href="#">
                         <img src="images/Carousels/3.png" alt="product 3">
-                    </div>
+                        <span class="discount">خصم 10 %</span>
+                        <span class="new">جديد</span>
+                    </a>
                     <div class="text-box text-center">
-                        <p class="item-name">نموذج سيارة فيراري GTB RC 488</p>
+                        <a class="item-name" href="#">حذاء نايكي ريفولوشن 5 للنساء</a>
                         <div class="price-box">
-                            <p class="item-price">459 ريال </p>
-                            <button class="add-to-cart"><i class="fa fa-shopping-cart"></i> أضف إلى السلة </button>
-                            <button class="heart"><i class="fa fa-heart" aria-hidden="true"></i></button>
+                            <a class="item-price" href="#">459 ريال</a>
+                            <a class="add-to-cart" href="#"><i class="fa fa-shopping-cart"></i> أضف إلى السلة </a>
+                            <a class="heart" href="#"><i class="fa fa-heart" aria-hidden="true"></i></a>
                         </div>
                     </div>
                 </div>
 
                 <div class="item">
-                    <div class="img-box">
+                    <a class="img-box" href="#">
                         <img src="images/Carousels/4.png" alt="product 4">
                         <span class="discount">خصم 10 %</span>
-                    </div>
-                    <div class="text-box text-center">
-                        <p class="item-name">ماء عطر نيرو أسولوتو 75 مل</p>
-                        <div class="price-box">
-                            <p class="item-price">103.5 ريال <span>115 ريال</span></p>
-                            <button class="add-to-cart"><i class="fa fa-shopping-cart"></i> أضف إلى السلة </button>
-                            <button class="heart"><i class="fa fa-heart" aria-hidden="true"></i></button>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="item">
-                    <div class="img-box">
-                        <img src="images/Carousels/5.png" alt="product 5">
                         <span class="new">جديد</span>
-                    </div>
+                    </a>
                     <div class="text-box text-center">
-                        <p class="item-name">طقم قدور جرانيت تركي 7 قطع Blue سنتيمتر</p>
+                        <a class="item-name" href="#">حذاء نايكي ريفولوشن 5 للنساء</a>
                         <div class="price-box">
-                            <p class="item-price">299 ريال</p>
-                            <button class="add-to-cart"><i class="fa fa-shopping-cart"></i> أضف إلى السلة </button>
-                            <button class="heart"><i class="fa fa-heart" aria-hidden="true"></i></button>
+                            <a class="item-price" href="#">103.5 ريال <span>115 ريال</span></a>
+                            <a class="add-to-cart" href="#"><i class="fa fa-shopping-cart"></i> أضف إلى السلة </a>
+                            <a class="heart" href="#"><i class="fa fa-heart" aria-hidden="true"></i></a>
                         </div>
                     </div>
                 </div>
 
                 <div class="item">
-                    <div class="img-box">
+                    <a class="img-box" href="#">
+                        <img src="images/Carousels/5.png" alt="product 5">
+                        <span class="discount">خصم 10 %</span>
+                        <span class="new">جديد</span>
+                    </a>
+                    <div class="text-box text-center">
+                        <a class="item-name" href="#">حذاء نايكي ريفولوشن 5 للنساء</a>
+                        <div class="price-box">
+                            <a class="item-price" href="#">299 ريال</a>
+                            <a class="add-to-cart" href="#"><i class="fa fa-shopping-cart"></i> أضف إلى السلة </a>
+                            <a class="heart" href="#"><i class="fa fa-heart" aria-hidden="true"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="item">
+                    <a class="img-box" href="#">
                         <img src="images/Carousels/6.png" alt="product 6">
                         <span class="discount">خصم 10 %</span>
-                    </div>
+                        <span class="new">جديد</span>
+                    </a>
                     <div class="text-box text-center">
-                        <p class="item-name">مجموعة مفتاح ربط قابلة للتعديل مكونة من 3 قطع BlackGreenSilver</p>
+                        <a class="item-name" href="#">حذاء نايكي ريفولوشن 5 للنساء</a>
                         <div class="price-box">
-                            <p class="item-price">35.10 ريال <span>39 ريال</span></p>
-                            <button class="add-to-cart"><i class="fa fa-shopping-cart"></i> أضف إلى السلة </button>
-                            <button class="heart"><i class="fa fa-heart" aria-hidden="true"></i></button>
+                            <a class="item-price" href="#">35.10 ريال <span>39 ريال</span></a>
+                            <a class="add-to-cart" href="#"><i class="fa fa-shopping-cart"></i> أضف إلى السلة </a>
+                            <a class="heart" href="#"><i class="fa fa-heart" aria-hidden="true"></i></a>
                         </div>
                     </div>
                 </div>
+
                 <div class="item">
-                    <div class="img-box">
+                    <a class="img-box" href="#">
                         <img src="images/Carousels/4.png" alt="product 4">
                         <span class="discount">خصم 10 %</span>
-                    </div>
+                        <span class="new">جديد</span>
+                    </a>
                     <div class="text-box text-center">
-                        <p class="item-name">ماء عطر نيرو أسولوتو 75 مل</p>
+                        <a class="item-name" href="#">حذاء نايكي ريفولوشن 5 للنساء</a>
                         <div class="price-box">
-                            <p class="item-price">103.5 ريال <span>115 ريال</span></p>
-                            <button class="add-to-cart"><i class="fa fa-shopping-cart"></i> أضف إلى السلة </button>
-                            <button class="heart"><i class="fa fa-heart" aria-hidden="true"></i></button>
+                            <a class="item-price" href="#">103.5 ريال <span>115 ريال</span></a>
+                            <a class="add-to-cart" href="#"><i class="fa fa-shopping-cart"></i> أضف إلى السلة </a>
+                            <a class="heart" href="#"><i class="fa fa-heart" aria-hidden="true"></i></a>
                         </div>
                     </div>
                 </div>
@@ -356,11 +376,15 @@
         <!-------------------- Gallary 1 Start ------------------->
         <section class="gallary">
             <div class="row">
-                <div class="col-xs-6">
-                    <img src="images/discounts/banner1.png">
+                <div class="col-md-6 col-xs-12">
+                    <a href="#" class="gallary-box">
+                        <img src="images/discounts/banner1.png">
+                    </a>
                 </div>
-                <div class="col-xs-6">
-                    <img src="images/discounts/banner2.png">
+                <div class="col-md-6 col-xs-12">
+                    <a href="#" class="gallary-box">
+                        <img src="images/discounts/banner2.png">
+                    </a>
                 </div>
             </div>
         </section>
@@ -374,106 +398,113 @@
             <div class="owl-carousel owl-theme">
 
                 <div class="item">
-                    <div class="img-box">
+                    <a class="img-box" href="#">
                         <img src="images/Carousels/1.png" alt="product 1">
                         <span class="discount">خصم 10 %</span>
                         <span class="new">جديد</span>
-                    </div>
+                    </a>
                     <div class="text-box text-center">
-                        <p class="item-name">حذاء نايكي ريفولوشن 5 للنساء</p>
+                        <a class="item-name" href="#">حذاء نايكي ريفولوشن 5 للنساء</a>
                         <div class="price-box">
-                            <p class="item-price">180 ريال <span>220 ريال</span></p>
-                            <button class="add-to-cart"><i class="fa fa-shopping-cart"></i> أضف إلى السلة </button>
-                            <button class="heart"><i class="fa fa-heart" aria-hidden="true"></i></button>
+                            <a class="item-price" href="#">180 ريال <span>220 ريال</span></a>
+                            <a class="add-to-cart" href="#"><i class="fa fa-shopping-cart"></i> أضف إلى السلة </a>
+                            <a class="heart" href="#"><i class="fa fa-heart" aria-hidden="true"></i></a>
                         </div>
                     </div>
                 </div>
 
                 <div class="item">
-                    <div class="img-box">
+                    <a class="img-box" href="#">
                         <img src="images/Carousels/2.png" alt="product 2">
+                        <span class="discount">خصم 10 %</span>
                         <span class="new">جديد</span>
-                    </div>
+                    </a>
                     <div class="text-box text-center">
-                        <p class="item-name">حقيبة كروسبدي مبطنة</p>
+                        <a class="item-name" href="#">حذاء نايكي ريفولوشن 5 للنساء</a>
                         <div class="price-box">
-                            <p class="item-price">69 ريال </p>
-                            <button class="add-to-cart"><i class="fa fa-shopping-cart"></i> أضف إلى السلة </button>
-                            <button class="heart"><i class="fa fa-heart" aria-hidden="true"></i></button>
+                            <a class="item-price" href="#">69 ريال</a>
+                            <a class="add-to-cart" href="#"><i class="fa fa-shopping-cart"></i> أضف إلى السلة </a>
+                            <a class="heart" href="#"><i class="fa fa-heart" aria-hidden="true"></i></a>
                         </div>
                     </div>
                 </div>
 
                 <div class="item">
-                    <div class="img-box">
+                    <a class="img-box" href="#">
                         <img src="images/Carousels/3.png" alt="product 3">
-                    </div>
+                        <span class="discount">خصم 10 %</span>
+                        <span class="new">جديد</span>
+                    </a>
                     <div class="text-box text-center">
-                        <p class="item-name">نموذج سيارة فيراري GTB RC 488</p>
+                        <a class="item-name" href="#">حذاء نايكي ريفولوشن 5 للنساء</a>
                         <div class="price-box">
-                            <p class="item-price">459 ريال </p>
-                            <button class="add-to-cart"><i class="fa fa-shopping-cart"></i> أضف إلى السلة </button>
-                            <button class="heart"><i class="fa fa-heart" aria-hidden="true"></i></button>
+                            <a class="item-price" href="#">459 ريال</a>
+                            <a class="add-to-cart" href="#"><i class="fa fa-shopping-cart"></i> أضف إلى السلة </a>
+                            <a class="heart" href="#"><i class="fa fa-heart" aria-hidden="true"></i></a>
                         </div>
                     </div>
                 </div>
 
                 <div class="item">
-                    <div class="img-box">
+                    <a class="img-box" href="#">
                         <img src="images/Carousels/4.png" alt="product 4">
                         <span class="discount">خصم 10 %</span>
-                    </div>
-                    <div class="text-box text-center">
-                        <p class="item-name">ماء عطر نيرو أسولوتو 75 مل</p>
-                        <div class="price-box">
-                            <p class="item-price">103.5 ريال <span>115 ريال</span></p>
-                            <button class="add-to-cart"><i class="fa fa-shopping-cart"></i> أضف إلى السلة </button>
-                            <button class="heart"><i class="fa fa-heart" aria-hidden="true"></i></button>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="item">
-                    <div class="img-box">
-                        <img src="images/Carousels/5.png" alt="product 5">
                         <span class="new">جديد</span>
-                    </div>
+                    </a>
                     <div class="text-box text-center">
-                        <p class="item-name">طقم قدور جرانيت تركي 7 قطع Blue سنتيمتر</p>
+                        <a class="item-name" href="#">حذاء نايكي ريفولوشن 5 للنساء</a>
                         <div class="price-box">
-                            <p class="item-price">299 ريال</p>
-                            <button class="add-to-cart"><i class="fa fa-shopping-cart"></i> أضف إلى السلة </button>
-                            <button class="heart"><i class="fa fa-heart" aria-hidden="true"></i></button>
+                            <a class="item-price" href="#">103.5 ريال <span>115 ريال</span></a>
+                            <a class="add-to-cart" href="#"><i class="fa fa-shopping-cart"></i> أضف إلى السلة </a>
+                            <a class="heart" href="#"><i class="fa fa-heart" aria-hidden="true"></i></a>
                         </div>
                     </div>
                 </div>
 
                 <div class="item">
-                    <div class="img-box">
+                    <a class="img-box" href="#">
+                        <img src="images/Carousels/5.png" alt="product 5">
+                        <span class="discount">خصم 10 %</span>
+                        <span class="new">جديد</span>
+                    </a>
+                    <div class="text-box text-center">
+                        <a class="item-name" href="#">حذاء نايكي ريفولوشن 5 للنساء</a>
+                        <div class="price-box">
+                            <a class="item-price" href="#">299 ريال</a>
+                            <a class="add-to-cart" href="#"><i class="fa fa-shopping-cart"></i> أضف إلى السلة </a>
+                            <a class="heart" href="#"><i class="fa fa-heart" aria-hidden="true"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="item">
+                    <a class="img-box" href="#">
                         <img src="images/Carousels/6.png" alt="product 6">
                         <span class="discount">خصم 10 %</span>
-                    </div>
+                        <span class="new">جديد</span>
+                    </a>
                     <div class="text-box text-center">
-                        <p class="item-name">مجموعة مفتاح ربط قابلة للتعديل مكونة من 3 قطع BlackGreenSilver</p>
+                        <a class="item-name" href="#">حذاء نايكي ريفولوشن 5 للنساء</a>
                         <div class="price-box">
-                            <p class="item-price">35.10 ريال <span>39 ريال</span></p>
-                            <button class="add-to-cart"><i class="fa fa-shopping-cart"></i> أضف إلى السلة </button>
-                            <button class="heart"><i class="fa fa-heart" aria-hidden="true"></i></button>
+                            <a class="item-price" href="#">35.10 ريال <span>39 ريال</span></a>
+                            <a class="add-to-cart" href="#"><i class="fa fa-shopping-cart"></i> أضف إلى السلة </a>
+                            <a class="heart" href="#"><i class="fa fa-heart" aria-hidden="true"></i></a>
                         </div>
                     </div>
                 </div>
 
                 <div class="item">
-                    <div class="img-box">
+                    <a class="img-box" href="#">
                         <img src="images/Carousels/4.png" alt="product 4">
                         <span class="discount">خصم 10 %</span>
-                    </div>
+                        <span class="new">جديد</span>
+                    </a>
                     <div class="text-box text-center">
-                        <p class="item-name">ماء عطر نيرو أسولوتو 75 مل</p>
+                        <a class="item-name" href="#">حذاء نايكي ريفولوشن 5 للنساء</a>
                         <div class="price-box">
-                            <p class="item-price">103.5 ريال <span>115 ريال</span></p>
-                            <button class="add-to-cart"><i class="fa fa-shopping-cart"></i> أضف إلى السلة </button>
-                            <button class="heart"><i class="fa fa-heart" aria-hidden="true"></i></button>
+                            <a class="item-price" href="#">103.5 ريال <span>115 ريال</span></a>
+                            <a class="add-to-cart" href="#"><i class="fa fa-shopping-cart"></i> أضف إلى السلة </a>
+                            <a class="heart" href="#"><i class="fa fa-heart" aria-hidden="true"></i></a>
                         </div>
                     </div>
                 </div>
@@ -486,7 +517,9 @@
         <section class="delivery">
             <div class="row">
                 <div class="col-xs-12">
-                    <img src="images/delivery/banner.png">
+                    <a href="#" class="delivery-link">
+                        <img src="images/delivery/banner.png">
+                    </a>
                 </div>
             </div>
         </section>
@@ -501,106 +534,113 @@
             <div class="owl-carousel owl-theme">
 
                 <div class="item">
-                    <div class="img-box">
+                    <a class="img-box" href="#">
                         <img src="images/Carousels/1.png" alt="product 1">
                         <span class="discount">خصم 10 %</span>
                         <span class="new">جديد</span>
-                    </div>
+                    </a>
                     <div class="text-box text-center">
-                        <p class="item-name">حذاء نايكي ريفولوشن 5 للنساء</p>
+                        <a class="item-name" href="#">حذاء نايكي ريفولوشن 5 للنساء</a>
                         <div class="price-box">
-                            <p class="item-price">180 ريال <span>220 ريال</span></p>
-                            <button class="add-to-cart"><i class="fa fa-shopping-cart"></i> أضف إلى السلة </button>
-                            <button class="heart"><i class="fa fa-heart" aria-hidden="true"></i></button>
+                            <a class="item-price" href="#">180 ريال <span>220 ريال</span></a>
+                            <a class="add-to-cart" href="#"><i class="fa fa-shopping-cart"></i> أضف إلى السلة </a>
+                            <a class="heart" href="#"><i class="fa fa-heart" aria-hidden="true"></i></a>
                         </div>
                     </div>
                 </div>
 
                 <div class="item">
-                    <div class="img-box">
+                    <a class="img-box" href="#">
                         <img src="images/Carousels/2.png" alt="product 2">
+                        <span class="discount">خصم 10 %</span>
                         <span class="new">جديد</span>
-                    </div>
+                    </a>
                     <div class="text-box text-center">
-                        <p class="item-name">حقيبة كروسبدي مبطنة</p>
+                        <a class="item-name" href="#">حذاء نايكي ريفولوشن 5 للنساء</a>
                         <div class="price-box">
-                            <p class="item-price">69 ريال </p>
-                            <button class="add-to-cart"><i class="fa fa-shopping-cart"></i> أضف إلى السلة </button>
-                            <button class="heart"><i class="fa fa-heart" aria-hidden="true"></i></button>
+                            <a class="item-price" href="#">69 ريال</a>
+                            <a class="add-to-cart" href="#"><i class="fa fa-shopping-cart"></i> أضف إلى السلة </a>
+                            <a class="heart" href="#"><i class="fa fa-heart" aria-hidden="true"></i></a>
                         </div>
                     </div>
                 </div>
 
                 <div class="item">
-                    <div class="img-box">
+                    <a class="img-box" href="#">
                         <img src="images/Carousels/3.png" alt="product 3">
-                    </div>
+                        <span class="discount">خصم 10 %</span>
+                        <span class="new">جديد</span>
+                    </a>
                     <div class="text-box text-center">
-                        <p class="item-name">نموذج سيارة فيراري GTB RC 488</p>
+                        <a class="item-name" href="#">حذاء نايكي ريفولوشن 5 للنساء</a>
                         <div class="price-box">
-                            <p class="item-price">459 ريال </p>
-                            <button class="add-to-cart"><i class="fa fa-shopping-cart"></i> أضف إلى السلة </button>
-                            <button class="heart"><i class="fa fa-heart" aria-hidden="true"></i></button>
+                            <a class="item-price" href="#">459 ريال</a>
+                            <a class="add-to-cart" href="#"><i class="fa fa-shopping-cart"></i> أضف إلى السلة </a>
+                            <a class="heart" href="#"><i class="fa fa-heart" aria-hidden="true"></i></a>
                         </div>
                     </div>
                 </div>
 
                 <div class="item">
-                    <div class="img-box">
+                    <a class="img-box" href="#">
                         <img src="images/Carousels/4.png" alt="product 4">
                         <span class="discount">خصم 10 %</span>
-                    </div>
-                    <div class="text-box text-center">
-                        <p class="item-name">ماء عطر نيرو أسولوتو 75 مل</p>
-                        <div class="price-box">
-                            <p class="item-price">103.5 ريال <span>115 ريال</span></p>
-                            <button class="add-to-cart"><i class="fa fa-shopping-cart"></i> أضف إلى السلة </button>
-                            <button class="heart"><i class="fa fa-heart" aria-hidden="true"></i></button>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="item">
-                    <div class="img-box">
-                        <img src="images/Carousels/5.png" alt="product 5">
                         <span class="new">جديد</span>
-                    </div>
+                    </a>
                     <div class="text-box text-center">
-                        <p class="item-name">طقم قدور جرانيت تركي 7 قطع Blue سنتيمتر</p>
+                        <a class="item-name" href="#">حذاء نايكي ريفولوشن 5 للنساء</a>
                         <div class="price-box">
-                            <p class="item-price">299 ريال</p>
-                            <button class="add-to-cart"><i class="fa fa-shopping-cart"></i> أضف إلى السلة </button>
-                            <button class="heart"><i class="fa fa-heart" aria-hidden="true"></i></button>
+                            <a class="item-price" href="#">103.5 ريال <span>115 ريال</span></a>
+                            <a class="add-to-cart" href="#"><i class="fa fa-shopping-cart"></i> أضف إلى السلة </a>
+                            <a class="heart" href="#"><i class="fa fa-heart" aria-hidden="true"></i></a>
                         </div>
                     </div>
                 </div>
 
                 <div class="item">
-                    <div class="img-box">
+                    <a class="img-box" href="#">
+                        <img src="images/Carousels/5.png" alt="product 5">
+                        <span class="discount">خصم 10 %</span>
+                        <span class="new">جديد</span>
+                    </a>
+                    <div class="text-box text-center">
+                        <a class="item-name" href="#">حذاء نايكي ريفولوشن 5 للنساء</a>
+                        <div class="price-box">
+                            <a class="item-price" href="#">299 ريال</a>
+                            <a class="add-to-cart" href="#"><i class="fa fa-shopping-cart"></i> أضف إلى السلة </a>
+                            <a class="heart" href="#"><i class="fa fa-heart" aria-hidden="true"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="item">
+                    <a class="img-box" href="#">
                         <img src="images/Carousels/6.png" alt="product 6">
                         <span class="discount">خصم 10 %</span>
-                    </div>
+                        <span class="new">جديد</span>
+                    </a>
                     <div class="text-box text-center">
-                        <p class="item-name">مجموعة مفتاح ربط قابلة للتعديل مكونة من 3 قطع BlackGreenSilver</p>
+                        <a class="item-name" href="#">حذاء نايكي ريفولوشن 5 للنساء</a>
                         <div class="price-box">
-                            <p class="item-price">35.10 ريال <span>39 ريال</span></p>
-                            <button class="add-to-cart"><i class="fa fa-shopping-cart"></i> أضف إلى السلة </button>
-                            <button class="heart"><i class="fa fa-heart" aria-hidden="true"></i></button>
+                            <a class="item-price" href="#">35.10 ريال <span>39 ريال</span></a>
+                            <a class="add-to-cart" href="#"><i class="fa fa-shopping-cart"></i> أضف إلى السلة </a>
+                            <a class="heart" href="#"><i class="fa fa-heart" aria-hidden="true"></i></a>
                         </div>
                     </div>
                 </div>
 
                 <div class="item">
-                    <div class="img-box">
+                    <a class="img-box" href="#">
                         <img src="images/Carousels/4.png" alt="product 4">
                         <span class="discount">خصم 10 %</span>
-                    </div>
+                        <span class="new">جديد</span>
+                    </a>
                     <div class="text-box text-center">
-                        <p class="item-name">ماء عطر نيرو أسولوتو 75 مل</p>
+                        <a class="item-name" href="#">حذاء نايكي ريفولوشن 5 للنساء</a>
                         <div class="price-box">
-                            <p class="item-price">103.5 ريال <span>115 ريال</span></p>
-                            <button class="add-to-cart"><i class="fa fa-shopping-cart"></i> أضف إلى السلة </button>
-                            <button class="heart"><i class="fa fa-heart" aria-hidden="true"></i></button>
+                            <a class="item-price" href="#">103.5 ريال <span>115 ريال</span></a>
+                            <a class="add-to-cart" href="#"><i class="fa fa-shopping-cart"></i> أضف إلى السلة </a>
+                            <a class="heart" href="#"><i class="fa fa-heart" aria-hidden="true"></i></a>
                         </div>
                     </div>
                 </div>
@@ -612,11 +652,15 @@
         <!-------------------- Gallary 2 Start ------------------->
         <section class="gallary">
             <div class="row">
-                <div class="col-xs-6">
-                    <img src="images/discounts 2/banner1.png">
+                <div class="col-md-6 col-xs-12">
+                    <a href="#" class="gallary-box">
+                        <img src="images/discounts 2/banner1.png">
+                    </a>
                 </div>
-                <div class="col-xs-6">
-                    <img src="images/discounts/banner2.png">
+                <div class="col-md-6 col-xs-12">
+                    <a href="#" class="gallary-box">
+                        <img src="images/discounts/banner2.png">
+                    </a>
                 </div>
             </div>
         </section>
@@ -630,106 +674,113 @@
             <div class="owl-carousel owl-theme">
 
                 <div class="item">
-                    <div class="img-box">
+                    <a class="img-box" href="#">
                         <img src="images/Carousels/1.png" alt="product 1">
                         <span class="discount">خصم 10 %</span>
                         <span class="new">جديد</span>
-                    </div>
+                    </a>
                     <div class="text-box text-center">
-                        <p class="item-name">حذاء نايكي ريفولوشن 5 للنساء</p>
+                        <a class="item-name" href="#">حذاء نايكي ريفولوشن 5 للنساء</a>
                         <div class="price-box">
-                            <p class="item-price">180 ريال <span>220 ريال</span></p>
-                            <button class="add-to-cart"><i class="fa fa-shopping-cart"></i> أضف إلى السلة </button>
-                            <button class="heart"><i class="fa fa-heart" aria-hidden="true"></i></button>
+                            <a class="item-price" href="#">180 ريال <span>220 ريال</span></a>
+                            <a class="add-to-cart" href="#"><i class="fa fa-shopping-cart"></i> أضف إلى السلة </a>
+                            <a class="heart" href="#"><i class="fa fa-heart" aria-hidden="true"></i></a>
                         </div>
                     </div>
                 </div>
 
                 <div class="item">
-                    <div class="img-box">
+                    <a class="img-box" href="#">
                         <img src="images/Carousels/2.png" alt="product 2">
+                        <span class="discount">خصم 10 %</span>
                         <span class="new">جديد</span>
-                    </div>
+                    </a>
                     <div class="text-box text-center">
-                        <p class="item-name">حقيبة كروسبدي مبطنة</p>
+                        <a class="item-name" href="#">حذاء نايكي ريفولوشن 5 للنساء</a>
                         <div class="price-box">
-                            <p class="item-price">69 ريال </p>
-                            <button class="add-to-cart"><i class="fa fa-shopping-cart"></i> أضف إلى السلة </button>
-                            <button class="heart"><i class="fa fa-heart" aria-hidden="true"></i></button>
+                            <a class="item-price" href="#">69 ريال</a>
+                            <a class="add-to-cart" href="#"><i class="fa fa-shopping-cart"></i> أضف إلى السلة </a>
+                            <a class="heart" href="#"><i class="fa fa-heart" aria-hidden="true"></i></a>
                         </div>
                     </div>
                 </div>
 
                 <div class="item">
-                    <div class="img-box">
+                    <a class="img-box" href="#">
                         <img src="images/Carousels/3.png" alt="product 3">
-                    </div>
+                        <span class="discount">خصم 10 %</span>
+                        <span class="new">جديد</span>
+                    </a>
                     <div class="text-box text-center">
-                        <p class="item-name">نموذج سيارة فيراري GTB RC 488</p>
+                        <a class="item-name" href="#">حذاء نايكي ريفولوشن 5 للنساء</a>
                         <div class="price-box">
-                            <p class="item-price">459 ريال </p>
-                            <button class="add-to-cart"><i class="fa fa-shopping-cart"></i> أضف إلى السلة </button>
-                            <button class="heart"><i class="fa fa-heart" aria-hidden="true"></i></button>
+                            <a class="item-price" href="#">459 ريال</a>
+                            <a class="add-to-cart" href="#"><i class="fa fa-shopping-cart"></i> أضف إلى السلة </a>
+                            <a class="heart" href="#"><i class="fa fa-heart" aria-hidden="true"></i></a>
                         </div>
                     </div>
                 </div>
 
                 <div class="item">
-                    <div class="img-box">
+                    <a class="img-box" href="#">
                         <img src="images/Carousels/4.png" alt="product 4">
                         <span class="discount">خصم 10 %</span>
-                    </div>
-                    <div class="text-box text-center">
-                        <p class="item-name">ماء عطر نيرو أسولوتو 75 مل</p>
-                        <div class="price-box">
-                            <p class="item-price">103.5 ريال <span>115 ريال</span></p>
-                            <button class="add-to-cart"><i class="fa fa-shopping-cart"></i> أضف إلى السلة </button>
-                            <button class="heart"><i class="fa fa-heart" aria-hidden="true"></i></button>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="item">
-                    <div class="img-box">
-                        <img src="images/Carousels/5.png" alt="product 5">
                         <span class="new">جديد</span>
-                    </div>
+                    </a>
                     <div class="text-box text-center">
-                        <p class="item-name">طقم قدور جرانيت تركي 7 قطع Blue سنتيمتر</p>
+                        <a class="item-name" href="#">حذاء نايكي ريفولوشن 5 للنساء</a>
                         <div class="price-box">
-                            <p class="item-price">299 ريال</p>
-                            <button class="add-to-cart"><i class="fa fa-shopping-cart"></i> أضف إلى السلة </button>
-                            <button class="heart"><i class="fa fa-heart" aria-hidden="true"></i></button>
+                            <a class="item-price" href="#">103.5 ريال <span>115 ريال</span></a>
+                            <a class="add-to-cart" href="#"><i class="fa fa-shopping-cart"></i> أضف إلى السلة </a>
+                            <a class="heart" href="#"><i class="fa fa-heart" aria-hidden="true"></i></a>
                         </div>
                     </div>
                 </div>
 
                 <div class="item">
-                    <div class="img-box">
+                    <a class="img-box" href="#">
+                        <img src="images/Carousels/5.png" alt="product 5">
+                        <span class="discount">خصم 10 %</span>
+                        <span class="new">جديد</span>
+                    </a>
+                    <div class="text-box text-center">
+                        <a class="item-name" href="#">حذاء نايكي ريفولوشن 5 للنساء</a>
+                        <div class="price-box">
+                            <a class="item-price" href="#">299 ريال</a>
+                            <a class="add-to-cart" href="#"><i class="fa fa-shopping-cart"></i> أضف إلى السلة </a>
+                            <a class="heart" href="#"><i class="fa fa-heart" aria-hidden="true"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="item">
+                    <a class="img-box" href="#">
                         <img src="images/Carousels/6.png" alt="product 6">
                         <span class="discount">خصم 10 %</span>
-                    </div>
+                        <span class="new">جديد</span>
+                    </a>
                     <div class="text-box text-center">
-                        <p class="item-name">مجموعة مفتاح ربط قابلة للتعديل مكونة من 3 قطع BlackGreenSilver</p>
+                        <a class="item-name" href="#">حذاء نايكي ريفولوشن 5 للنساء</a>
                         <div class="price-box">
-                            <p class="item-price">35.10 ريال <span>39 ريال</span></p>
-                            <button class="add-to-cart"><i class="fa fa-shopping-cart"></i> أضف إلى السلة </button>
-                            <button class="heart"><i class="fa fa-heart" aria-hidden="true"></i></button>
+                            <a class="item-price" href="#">35.10 ريال <span>39 ريال</span></a>
+                            <a class="add-to-cart" href="#"><i class="fa fa-shopping-cart"></i> أضف إلى السلة </a>
+                            <a class="heart" href="#"><i class="fa fa-heart" aria-hidden="true"></i></a>
                         </div>
                     </div>
                 </div>
 
                 <div class="item">
-                    <div class="img-box">
+                    <a class="img-box" href="#">
                         <img src="images/Carousels/4.png" alt="product 4">
                         <span class="discount">خصم 10 %</span>
-                    </div>
+                        <span class="new">جديد</span>
+                    </a>
                     <div class="text-box text-center">
-                        <p class="item-name">ماء عطر نيرو أسولوتو 75 مل</p>
+                        <a class="item-name" href="#">حذاء نايكي ريفولوشن 5 للنساء</a>
                         <div class="price-box">
-                            <p class="item-price">103.5 ريال <span>115 ريال</span></p>
-                            <button class="add-to-cart"><i class="fa fa-shopping-cart"></i> أضف إلى السلة </button>
-                            <button class="heart"><i class="fa fa-heart" aria-hidden="true"></i></button>
+                            <a class="item-price" href="#">103.5 ريال <span>115 ريال</span></a>
+                            <a class="add-to-cart" href="#"><i class="fa fa-shopping-cart"></i> أضف إلى السلة </a>
+                            <a class="heart" href="#"><i class="fa fa-heart" aria-hidden="true"></i></a>
                         </div>
                     </div>
                 </div>
@@ -742,7 +793,9 @@
         <section class="delivery">
             <div class="row">
                 <div class="col-xs-12">
-                    <img src="images/Shop from home/shop.png">
+                    <a href="#" class="delivery-link">
+                        <img src="images/Shop from home/shop.png">
+                    </a>
                 </div>
             </div>
         </section>
@@ -756,45 +809,45 @@
             <div id="clients" class="owl-carousel owl-theme">
 
                 <div class="client">
-                    <div class="client-img">
+                    <a class="client-img" href="#">
                         <img src="images/clients/1.png" alt="Client 1">
-                    </div>
+                    </a>
                 </div>
 
                 <div class="client">
-                    <div class="client-img">
+                    <a class="client-img" href="#">
                         <img src="images/clients/2.png" alt="Client 2">
-                    </div>
+                    </a>
                 </div>
 
                 <div class="client">
-                    <div class="client-img">
+                    <a class="client-img" href="#">
                         <img src="images/clients/3.png" alt="Client 3">
-                    </div>
+                    </a>
                 </div>
 
                 <div class="client">
-                    <div class="client-img">
+                    <a class="client-img" href="#">
                         <img src="images/clients/4.png" alt="Client 4">
-                    </div>
+                    </a>
                 </div>
 
                 <div class="client">
-                    <div class="client-img">
+                    <a class="client-img" href="#">
                         <img src="images/clients/5.png" alt="Client 5">
-                    </div>
+                    </a>
                 </div>
 
                 <div class="client">
-                    <div class="client-img">
+                    <a class="client-img" href="#">
                         <img src="images/clients/6.png" alt="Client 6">
-                    </div>
+                    </a>
                 </div>
 
                 <div class="client">
-                    <div class="client-img">
+                    <a class="client-img" href="#">
                         <img src="images/clients/4.png" alt="Client 4">
-                    </div>
+                    </a>
                 </div>
 
             </div>
@@ -804,30 +857,32 @@
         <!--------------------   Features Section Start----------------------->
         <section class="features">
             <div class="row">
-                <div class="feature text-center col-md-3 col-xs-6">
-                    <i class="fas fa-rocket"></i>
+                <div class="feature text-center col-md-3 col-xs-12">
+                    <i class="fas fa-truck fa-lg"></i>
                     <p>شحن وتوصيل سريع</p>
                 </div>
 
-                <div class="feature text-center col-md-3 col-xs-6">
-                    <i class="fas fa-lock"></i>
+                <div class="feature text-center col-md-3 col-xs-12">
+                    <i class="fas fa-credit-card fa-lg"></i>
                     <p>وسائل دفع آمنة 100% </p>
                 </div>
 
-                <div class="feature text-center col-md-3 col-xs-6">
-                    <i class="far fa-star"></i>
-                    <p>الاستبدال والاسترجاع</p>
+                <div class="feature text-center col-md-3 col-xs-12">
+                    <i class="fas fa-star fa-lg"></i>
+                    <p>منتجات ذات جودة عالية</p>
                 </div>
 
-                <div class="feature text-center col-md-3 col-xs-6">
-                    <i class="fas fa-sync-alt"></i>
+                <div class="feature text-center col-md-3 col-xs-12">
+                    <i class="fas fa-exchange-alt fa-lg"></i>
                     <p>الاستبدال والاسترجاع</p>
                 </div>
             </div>
         </section>
         <!-------------------  Features Section End -------------------------->
+    </div>
 
-        <footer>
+    <footer>
+        <div class="container">
             <div class="footer-top">
 
                 <div class="row">
@@ -847,11 +902,11 @@
                                 <div class="colno2">
                                     <h4>معلومات</h4>
                                     <ul class="footer-data-list list-unstyled">
-                                        <li>من نحن</li>
-                                        <li>الشحن والتوصيل</li>
-                                        <li>الحسابات البنكية</li>
-                                        <li>الخصوصية</li>
-                                        <li>شروط الاستخدام</li>
+                                        <li><a href="#">من نحن</a></li>
+                                        <li><a href="#">الشحن والتوصيل</a></li>
+                                        <li><a href="#">الحسابات البنكية</a></li>
+                                        <li><a href="#">الخصوصية</a></li>
+                                        <li><a href="#">شروط الاستخدام</a></li>
                                     </ul>
                                 </div>
                             </div>
@@ -860,10 +915,10 @@
                                 <div class="colno3">
                                     <h4>إضافات</h4>
                                     <ul class="footer-data-list list-unstyled">
-                                        <li>الشركات</li>
-                                        <li>قسائم الهدايا</li>
-                                        <li>نظام العمولة</li>
-                                        <li>العروض المميزة</li>
+                                        <li><a href="#">الشركات</a></li>
+                                        <li><a href="#">قسائم الهدايا</a></li>
+                                        <li><a href="#">نظام العمولة</a></li>
+                                        <li><a href="#">العروض المميزة</a></li>
                                     </ul>
                                 </div>
                             </div>
@@ -880,10 +935,10 @@
                                 <div class="colno4">
                                     <h4>خدمة العملاء</h4>
                                     <ul class="footer-data-list list-unstyled">
-                                        <li>اتصل بنا </li>
-                                        <li>ارجاع الطلب </li>
-                                        <li>خريطة الموقع</li>
-                                        <li>دخول تاجر </li>
+                                        <li><a href="#">اتصل بنا </a></li>
+                                        <li><a href="#">ارجاع الطلب </a></li>
+                                        <li><a href="#">خريطة الموقع</a></li>
+                                        <li><a href="#">دخول تاجر </a></li>
                                     </ul>
                                 </div>
                             </div>
@@ -892,10 +947,10 @@
                                 <div class="colno5">
                                     <h4>حسابي</h4>
                                     <ul class="footer-data-list list-unstyled">
-                                        <li>حسابي</li>
-                                        <li>طلباتي</li>
-                                        <li>قائمة رغباتي </li>
-                                        <li>القائمة البريدية</li>
+                                        <li><a href="#">حسابي</a></li>
+                                        <li><a href="#">طلباتي</a></li>
+                                        <li><a href="#">قائمة رغباتي </a></li>
+                                        <li><a href="#">القائمة البريدية</a></li>
                                     </ul>
                                 </div>
                             </div>
@@ -908,10 +963,10 @@
                                         <i class="fas fa-arrow-left"></i>
                                     </div>
                                     <ul class="footer-icon-list list-unstyled">
-                                        <li><i class="fab fa-facebook-f"></i></li>
-                                        <li><i class="fab fa-snapchat-ghost"></i></li>
-                                        <li><i class="fab fa-instagram"></i></li>
-                                        <li><i class="fab fa-twitter"></i></li>
+                                        <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                                        <li><a href="#"><i class="fab fa-snapchat-ghost"></i></a></li>
+                                        <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                                        <li><a href="#"><i class="fab fa-twitter"></i></a></li>
                                     </ul>
                                 </div>
                             </div>
@@ -931,11 +986,12 @@
                     <img src="images/footer/payment.png" alt="Payment">
                 </div>
             </div>
-        </footer>
+        </div>
+    </footer>
 
 
 
-    </div>
+
 
 
     <!-- Small Screen media hidden list -->
@@ -1028,6 +1084,7 @@
 
     <script src="js/jquery-3.5.1.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
+    <script src="js/bootstrap-select.min.js"></script>
     <script src="js/owl.carousel.min.js"></script>
     <script src="js/main.js"></script>
 </body>

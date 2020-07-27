@@ -4,43 +4,52 @@
     .welcome {
         display: none;
     }
+    header {
+        margin-top: 0px;
+        margin-bottom: 20px;
+    }
     .header-top .sign-up .sign-in-up {
         display: none;
     }
-    .header-top .sign-up ul {
+    .header-top .sign-up .config-link {
+        display: none;
+    }
+    .header-top .sign-up .search-button {
+        display: block;
+        z-index: 9999;
+        margin-left: 20px;
+    }
+    .header-top .sign-up .hidden-menu {
         display: block;
         z-index: 99991;
+        margin-left: 20px;
     }
     .header-bottom {
         display: none;
     }
-    .main-slider .owl-carousel .owl-nav {
-        display: none;
-    }
-    .main-slider .owl-carousel .owl-dots {
-        position: relative;
-        left: 0;
-    }
-    .main-slider .owl-carousel .owl-dots .owl-dot:hover span {
-        background-color: #054f80;
-    }
-    .main-slider .owl-carousel .owl-dots .owl-dot.active span {
-        background-color: #054f80;
+    .main-slider {
+        margin-bottom: 30px;
     }
     .more-views .item .text-box .add-to-cart,
     .more-views .item .text-box .heart {
         font-size: 11px;
         outline: 0;
-        line-height: 20px;
+        line-height: 30px;
     }
     .more-views .owl-carousel .owl-dots {
         display: block;
+    }
+    .gallary {
+        margin-bottom: 0px;
     }
     .clients .owl-carousel .owl-dots {
         display: block;
     }
     .more-views .item .text-box .add-to-cart {
         width: 100px;
+    }
+    .features .feature {
+        margin-bottom: 20px;
     }
     footer .footer-top .colno1,
     footer .footer-top .colno2,
@@ -87,7 +96,7 @@
         top: 0;
         font-family: "regular";
         font-size: 10px;
-        width: 40%;
+        width: 280px;
         height: 100%;
         z-index: 99999;
         overflow: auto;
@@ -421,7 +430,11 @@
 
 /*********************  Large Screens *********************/
 
-@media (min-width:1200px) and (max-width:1399px) {}
+@media (min-width:1200px) and (max-width:1399px) {
+    .small-hidden-list {
+        display: none;
+    }
+}
 
 
 /********************* Extra Large Screens *********************/
@@ -431,5 +444,8 @@
         width: 1440px;
         padding-right: 15px;
         padding-left: 15px;
+    }
+    .small-hidden-list {
+        display: none;
     }
 }

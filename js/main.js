@@ -9,7 +9,7 @@ $(window).on('load', function() {
 
 $(document).ready(function() {
 
-    $(".sign-up ul").click(function() {
+    $(".sign-up .hidden-menu").click(function() {
         $("body").toggleClass("overflow")
         $(".small-hidden-list .white-list").toggleClass("overflow");
         $(".small-hidden-list").fadeToggle(600);
@@ -25,29 +25,29 @@ $(document).ready(function() {
         $(".nav-small-list-two").fadeToggle(600);
     });
 
-    $(".parent").hover(function() {
-        $("body").toggleClass("overflow");
+    /*$(".parent").hover(function() {
         $(".back-back").toggleClass("display");
         $(".toggle-btn ul.big-list").toggleClass("display");
         $(".back-back").toggleClass("display");
         $(".big-list").fadeToggle(1000);
-    });
+    });*/
 
-    $(".menu").hover(function() {
+    /*$(".menu").hover(function() {
         $(".menu-content").toggleClass("display");
         $(".menu-content").fadeToggle(600);
-    });
+    });*/
 
 
     $('#main-slider').owlCarousel({
         loop: true,
         margin: 10,
         rtl: true,
+        navText: ["<i class='fas fa-chevron-right fa-lg'></i>", "<i class='fas fa-chevron-left fa-lg'></i>"],
         responsiveClass: true,
         responsive: {
             0: {
                 items: 1,
-                nav: true,
+                nav: false,
                 loop: true
             },
             600: {
@@ -72,6 +72,7 @@ $(document).ready(function() {
         loop: true,
         margin: 10,
         rtl: true,
+        navText: ["<i class='fas fa-chevron-right fa-lg'></i>", "<i class='fas fa-chevron-left fa-lg'></i>"],
         responsiveClass: true,
         responsive: {
             0: {
@@ -79,24 +80,27 @@ $(document).ready(function() {
                 nav: false,
                 loop: true
             },
-            767: {
+            768: {
                 items: 3,
                 nav: false,
                 loop: true
             },
-            991: {
+            992: {
                 items: 4,
                 nav: false,
+                dots: true,
                 loop: true
             },
-            1199: {
+            1200: {
                 items: 5,
                 nav: true,
+                dots: false,
                 loop: true
             },
             1400: {
                 items: 6,
                 nav: true,
+                dots: false,
                 loop: true
             }
         }
@@ -105,21 +109,39 @@ $(document).ready(function() {
     $('#clients').owlCarousel({
         loop: true,
         rtl: true,
+        navText: ["<i class='fas fa-chevron-right fa-lg'></i>", "<i class='fas fa-chevron-left fa-lg'></i>"],
         margin: 10,
         responsiveClass: true,
         responsive: {
             0: {
-                items: 1,
-                nav: true
+                items: 2,
+                nav: false,
+                dots: true,
+                loop: true
             },
-            600: {
+            768: {
                 items: 3,
-                nav: false
+                nav: false,
+                dots: true,
+                loop: true
             },
-            1000: {
+            992: {
+                items: 4,
+                nav: true,
+                dots: true,
+                loop: true
+            },
+            1200: {
                 items: 5,
                 nav: true,
-                loop: false
+                dots: false,
+                loop: true
+            },
+            1400: {
+                items: 5,
+                nav: true,
+                dots: false,
+                loop: true
             }
         }
     })
