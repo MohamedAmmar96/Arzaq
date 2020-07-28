@@ -82,7 +82,7 @@ header {
 }
 
 .header-top .logo img {
-    width: 100%;
+    width: auto;
 }
 
 
@@ -591,7 +591,7 @@ header {
 }
 
 .more-views .item .img-box img {
-    width: 100%;
+    max-width: auto;
     transition: all 0.4s ease-in-out;
 }
 
@@ -619,7 +619,7 @@ header {
 }
 
 .more-views .item .img-box .new {
-    left: 10px;
+    left: 20px;
     width: 44px;
     height: 22px;
     background-color: #0dc143;
@@ -769,7 +769,7 @@ header {
 /*************************** Gallary 1 Section ***************************/
 
 .gallary {
-    margin-bottom: 70px;
+    margin-bottom: 40px;
 }
 
 .gallary a {
@@ -881,10 +881,6 @@ header {
 }
 
 .clients .owl-carousel .owl-dots {
-    display: none;
-}
-
-.clients .owl-carousel .owl-dots {
     position: absolute;
     transform: translateX(-50%);
     left: 50%;
@@ -974,16 +970,8 @@ footer .footer-top .colno6 {
     flex-direction: column;
 }
 
-footer .footer-top .colno1 {
-    margin-right: 20px;
-}
-
-footer .footer-top .colno6 {
-    margin-left: 20px;
-}
-
 footer .footer-top .colno1 img {
-    width: 60%;
+    width: 200px;
     margin-bottom: 35px;
 }
 
@@ -1004,6 +992,14 @@ footer .footer-top .footer-data-list li {
     margin-bottom: 10px;
     font-family: "regular";
     font-size: 15px;
+}
+
+footer .footer-top .footer-data-list li:first-child {
+    margin-top: 10px;
+}
+
+footer .footer-top .footer-data-list li:last-child {
+    margin-bottom: 0;
 }
 
 footer .footer-top .footer-data-list li a {
