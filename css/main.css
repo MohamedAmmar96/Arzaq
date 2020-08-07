@@ -297,11 +297,13 @@ header {
     position: relative;
 }
 
-.header-bottom .big-list li span {
+.header-bottom .big-list li span,
+.header-bottom .big-list li i {
     transition: all 0.4s ease-in-out;
 }
 
-.header-bottom .big-list li:hover span {
+.header-bottom .big-list li:hover span,
+.header-bottom .big-list li:hover i {
     color: #cc9430;
     cursor: pointer;
     position: relative;
