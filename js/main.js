@@ -29,8 +29,8 @@ $(document).ready(function() {
         cursorcolor: "#054f80",
         cursorwidth: "7px",
         scrollspeed: 60,
-        mousescrollstep: 50,
-        cursorminheight: 100,
+        mousescrollstep: 40,
+        cursorminheight: 80,
     });
     //this is to open menu in small screens
     $(".sign-up .hidden-menu").click(function() {
