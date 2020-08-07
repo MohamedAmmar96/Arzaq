@@ -7,23 +7,73 @@ $(window).on('load', function() {
         });
 })
 
+var wow = new WOW({
+    boxClass: 'wow', // animated element css class (default is wow)
+    animateClass: 'animated', // animation css class (default is animated)
+    offset: 0, // distance to the element when triggering the animation (default is 0)
+    mobile: true, // trigger animations on mobile devices (default is true)
+    live: true, // act on asynchronously loaded content (default is true)
+    callback: function(box) {
+        // the callback is fired every time an animation is started
+        // the argument that is passed in is the DOM node being animated
+    },
+    scrollContainer: null, // optional scroll container selector, otherwise use window,
+    resetAnimation: true, // reset animation on end (default is true)
+});
+wow.init();
+
+
 $(document).ready(function() {
+
+    $("body").niceScroll({
+        cursorcolor: "#054f80",
+        cursorwidth: "7px",
+        scrollspeed: 60,
+        mousescrollstep: 50,
+        cursorminheight: 100,
+    });
     //this is to open menu in small screens
     $(".sign-up .hidden-menu").click(function() {
         $("body").toggleClass("overflow")
         $(".small-hidden-list .white-list").toggleClass("overflow");
         $(".small-hidden-list").fadeToggle(600);
     });
+    // this is to close the side menu in small screen
+    /*
+    if ($("body").width() != $(".small-hidden-list .white-list").width()) {
+        $("body").click(function() {
+            $(".small-hidden-list").fadeOut(600);
+        });
+    }*/
 
-    //--------------------------------------------------------------------------
-    //-----------------------------------------------------------------------------
+    // this is to close the side menu in small screen
+    /*var $calc = ($("body").width() - $(".small-hidden-list .white-list").width());
+    $("body").click(function() {
+        if (($calc).click() != $(".small-hidden-list .white-list")) {
+            $(".small-hidden-list").fadeOut(600);
+        }
+    });*/
+
+    // this is to close the side menu in small screen
+
+    /*var $calc = ($("body").width() - $trigger.width());
+    var $trigger = $(".small-hidden-list .white-list");
+    $($calc).onClick(function() {
+        $(".small-hidden-list").fadeOut("600");
+    });*/
+
     //this is to open Search in small screens
     $(".sign-up .search-button").click(function() {
         $("body").toggleClass("overflow")
         $(".sign-up .search-button").toggleClass("overflow");
-        $(".small-search").fadeToggle(600);
+        $(".small-search").fadeIn(600);
     });
 
+    //this is to close Search in small screens
+    $(".small-search .close").click(function() {
+        $("body").removeClass("overflow")
+        $(".small-search").fadeOut(600);
+    });
     //this is to open big list in menu in small screens
     $(".nested-list span").click(function() {
         $("div.white-list").toggleClass("display-overflow");
@@ -76,7 +126,7 @@ $(document).ready(function() {
             },
             768: {
                 items: 1,
-                nav: true,
+                nav: false,
                 loop: true
             },
             992: {
@@ -106,6 +156,11 @@ $(document).ready(function() {
         responsive: {
             0: {
                 items: 2,
+                nav: false,
+                loop: true
+            },
+            500: {
+                items: 3,
                 nav: false,
                 loop: true
             },
@@ -174,4 +229,31 @@ $(document).ready(function() {
             }
         }
     })
+
+    //this is to make the features part as owl-carousel slider  
+    if ($(window).width() <= 991) {
+        $(".features div").addClass("owl-carousel owl-theme");
+        $(".features .feature").removeClass("owl-carousel");
+        $('.features .owl-carousel').owlCarousel({
+            loop: true,
+            margin: 10,
+            rtl: true,
+            responsiveClass: true,
+            responsive: {
+                0: {
+                    items: 1,
+                    nav: false,
+                    loop: true
+                },
+                500: {
+                    items: 2,
+                    nav: false,
+                    loop: true
+                }
+            }
+        })
+    } else {
+        $(".features div").removeClass("owl-carousel");
+        $(".features div .feature").removeClass("owl-carousel");
+    };
 });
