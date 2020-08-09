@@ -25,19 +25,29 @@ wow.init();
 
 $(document).ready(function() {
 
-    $("body").niceScroll({
-        cursorcolor: "#054f80",
-        cursorwidth: "7px",
-        scrollspeed: 60,
-        mousescrollstep: 40,
-        cursorminheight: 80,
-    });
     //this is to open menu in small screens
     $(".sign-up .hidden-menu").click(function() {
-        $("body").toggleClass("overflow")
-        $(".small-hidden-list .white-list").toggleClass("overflow");
-        $(".small-hidden-list").fadeToggle(600);
+        $("body").addClass("overflow");
+        $(".white-list").addClass("overflow");
+        $(".white-list").addClass("display");
+        $(".small-hidden-list").fadeIn(600);
     });
+    $(".sign-up .hidden-menu").click(function() {
+        $(".white-list").addClass("overflow");
+        $(".white-list").fadeIn(600);
+    });
+    $(".small-hidden-list").click(function() {
+        $("body").removeClass("overflow");
+        $(".white-list").removeClass("overflow");
+        $(".white-list").removeClass("display");
+        $(".small-hidden-list").fadeOut(600);
+    });
+    $(".small-hidden-list").click(function() {
+        $(".white-list").removeClass("overflow");
+        $(".white-list").fadeOut(600);
+    });
+
+
     // this is to close the side menu in small screen
     /*
     if ($("body").width() != $(".small-hidden-list .white-list").width()) {

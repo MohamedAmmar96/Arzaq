@@ -11,6 +11,25 @@ body {
     overflow: hidden;
 }
 
+::-webkit-scrollbar {
+    width: 7px;
+    background: #fff;
+}
+
+::-webkit-scrollbar:hover {
+    display: block;
+}
+
+ ::-webkit-scrollbar-thumb {
+    background: #054f80;
+    border-radius: 5px;
+    border: 1px solid #eee;
+}
+
+.display {
+    display: block;
+}
+
 
 /*===========================================================================
                         Bootstrap Edits Styles//
@@ -53,11 +72,18 @@ body {
     padding: 0 0 10px 0;
 }
 
+.welcome .welcome-hello .dropdown-menu>li>a {
+    padding: 8px 10px;
+    outline: none !important;
+    box-shadow: none;
+}
+
 .welcome .welcome-hello .lang-list .btn-default {
     color: #fff;
     background-color: transparent;
     border: none;
-    outline: none;
+    outline: none !important;
+    box-shadow: none;
 }
 
 
@@ -114,6 +140,8 @@ header {
     font-family: "medium";
     border-top-left-radius: 0;
     border-bottom-left-radius: 0;
+    outline: none !important;
+    box-shadow: none;
 }
 
 .header-top .search .search-bar .bootstrap-select .dropdown-toggle .filter-option {
@@ -122,8 +150,9 @@ header {
     font-size: 15px;
 }
 
-.dropdown-menu>li>a {
-    padding: 8px 20px;
+.header-top .search .search-bar .dropdown-menu>li>a {
+    padding: 8px 0px;
+    outline: none !important;
 }
 
 .header-top .search .search-bar input {

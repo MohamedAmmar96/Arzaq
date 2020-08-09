@@ -26,7 +26,6 @@
     }
     .header-top .sign-up .hidden-menu {
         display: block;
-        z-index: 99995;
         margin-left: 20px;
     }
     .header-bottom {
@@ -34,9 +33,6 @@
     }
     .main-slider {
         margin-bottom: 40px;
-    }
-    .main-slider .big-carousel {
-        height: 180px;
     }
     .main-slider .big-carousel img {
         width: 100%;
@@ -72,9 +68,6 @@
     }
     .delivery {
         margin-bottom: 50px;
-    }
-    .delivery .delivery-link {
-        height: 120px;
     }
     .delivery img {
         height: 100%;
@@ -144,7 +137,7 @@
     .display-overflow {
         overflow: hidden;
     }
-    .small-hidden-list .white-list {
+    .white-list {
         background: #fff;
         position: fixed;
         right: 0;
@@ -154,45 +147,52 @@
         width: 280px;
         height: 100%;
         z-index: 99999;
+        display: none;
         overflow: auto;
     }
-    .small-hidden-list .white-list .welcome-small {
+    .white-list .welcome-small {
         color: #054f80;
         display: flex;
         flex-direction: column;
         padding: 0px 15px;
-        margin-top: 50px;
         margin-bottom: 10px;
     }
-    .small-hidden-list .white-list .welcome-small button {
+    .white-list .welcome-small button {
         background-color: transparent;
         color: #054f80;
         border: none;
-        outline: none;
+        box-shadow: none;
         font-family: "bold";
         font-size: 14px;
+    }
+    .white-list .welcome-small .bootstrap-select .btn {
+        outline: none !important;
+    }
+    .white-list .welcome-small .bootstrap-select .dropdown-menu>li>a {
+        padding: 8px 10px;
+        outline: none !important;
     }
     .welcome-small .bootstrap-select .dropdown-toggle .filter-option {
         text-align: right;
     }
-    .small-hidden-list .white-list .nav-small {
-        padding: 15px 30px 10px;
+    .white-list .nav-small {
+        padding: 15px 27px 0px;
         margin-top: 30px;
     }
-    .small-hidden-list .white-list .nav-small .nav-small-list li span {
+    .white-list .nav-small .nav-small-list li span {
         color: #054f80;
         font-family: "bold";
         font-size: 14px;
     }
-    .small-hidden-list .white-list .nav-small .nav-small-list li span a {
+    .white-list .nav-small .nav-small-list li span a {
         color: #054f80;
         text-decoration: none;
     }
-    .small-hidden-list .white-list .nav-small .nav-small-list li {
+    .white-list .nav-small .nav-small-list li {
         margin-bottom: 10px;
         margin-top: 5px;
     }
-    .small-hidden-list .white-list .nav-small .nav-small-list .nested-list button {
+    .white-list .nav-small .nav-small-list .nested-list button {
         background-color: transparent;
         border: none;
         outline: 0;
@@ -201,40 +201,40 @@
         margin-right: 15px;
         margin-top: 5px;
     }
-    .small-hidden-list .white-list .nav-small .nav-small-list .nested-list i {
+    .white-list .nav-small .nav-small-list .nested-list i {
         transition: all 0.4s ease-in-out;
         margin-right: 115px;
     }
     .rotate {
         transform: rotate(180deg) translateY(-3px);
     }
-    .small-hidden-list .white-list .nav-small .nav-small-list .nested-list .nav-small-list-one {
+    .white-list .nav-small .nav-small-list .nested-list .nav-small-list-one {
         display: none;
     }
-    .small-hidden-list .white-list .nav-small .nav-small-list .nested-list .nav-small-list-one li {
-        margin-right: 30px;
+    .white-list .nav-small .nav-small-list .nested-list .nav-small-list-one li {
+        margin-right: 15px;
         color: #054f80;
         font-family: "medium";
         font-size: 14px;
     }
-    .small-hidden-list .white-list .nav-small .nav-small-list .nested-list .nav-small-list-one li a {
+    .white-list .nav-small .nav-small-list .nested-list .nav-small-list-one li a {
         color: #054f80;
         text-decoration: none;
     }
-    .small-hidden-list .white-list .nav-small .nav-small-list .nested-list .nav-small-list-one .nested-list-two .nav-small-list-two {
+    .white-list .nav-small .nav-small-list .nested-list .nav-small-list-one .nested-list-two .nav-small-list-two {
         display: none;
     }
-    .small-hidden-list .white-list .nav-small .nav-small-list .nested-list .nav-small-list-one .nested-list-one .nav-small-list-two li {
-        margin-right: 30px;
+    .white-list .nav-small .nav-small-list .nested-list .nav-small-list-one .nested-list-one .nav-small-list-two li {
+        margin-right: 15px;
     }
-    .small-hidden-list .white-list .nav-small .nav-small-list .nested-list .nav-small-list-one .nested-list-two .nested-list-two-icon {
-        margin-right: 100px;
+    .white-list .nav-small .nav-small-list .nested-list .nav-small-list-one .nested-list-two .nested-list-two-icon {
+        margin-right: 120px;
     }
     .contact-small {
         font-family: "regular";
         font-size: 14px;
         color: #054f80;
-        margin-right: 30px;
+        margin-right: 27px;
     }
     .contact-small a {
         font-family: "bold";
@@ -353,13 +353,13 @@
 }
 
 @media (max-width:550px) {
-    .small-hidden-list .white-list .welcome-small .hello-small {
+    .white-list .welcome-small .hello-small {
         flex-direction: column;
     }
-    .small-hidden-list .white-list .welcome-small .hello-small img {
+    .white-list .welcome-small .hello-small img {
         order: 1;
     }
-    .small-hidden-list .white-list .welcome-small .hello-small p {
+    .white-list .welcome-small .hello-small p {
         order: 2;
     }
 }
@@ -393,7 +393,6 @@
     }
     .header-top .sign-up .hidden-menu {
         display: block;
-        z-index: 99995;
         margin-left: 20px;
     }
     .header-bottom {
@@ -511,7 +510,7 @@
     .display-overflow {
         overflow: hidden;
     }
-    .small-hidden-list .white-list {
+    .white-list {
         background: #fff;
         position: fixed;
         right: 0;
@@ -521,17 +520,17 @@
         width: 280px;
         height: 100%;
         z-index: 99999;
+        display: none;
         overflow: auto;
     }
-    .small-hidden-list .white-list .welcome-small {
+    .white-list .welcome-small {
         color: #054f80;
         display: flex;
         flex-direction: column;
         padding: 0px 15px;
-        margin-top: 50px;
         margin-bottom: 10px;
     }
-    .small-hidden-list .white-list .welcome-small button {
+    .white-list .welcome-small button {
         background-color: transparent;
         color: #054f80;
         border: none;
@@ -539,27 +538,34 @@
         font-family: "bold";
         font-size: 14px;
     }
+    .white-list .welcome-small .bootstrap-select .btn {
+        outline: none !important;
+    }
+    .white-list .welcome-small .bootstrap-select .dropdown-menu>li>a {
+        padding: 8px 10px;
+        outline: none !important;
+    }
     .welcome-small .bootstrap-select .dropdown-toggle .filter-option {
         text-align: right;
     }
-    .small-hidden-list .white-list .nav-small {
-        padding: 15px 30px 10px;
+    .white-list .nav-small {
+        padding: 15px 27px 0;
         margin-top: 30px;
     }
-    .small-hidden-list .white-list .nav-small .nav-small-list li span {
+    .white-list .nav-small .nav-small-list li span {
         color: #054f80;
         font-family: "bold";
         font-size: 14px;
     }
-    .small-hidden-list .white-list .nav-small .nav-small-list li span a {
+    .white-list .nav-small .nav-small-list li span a {
         color: #054f80;
         text-decoration: none;
     }
-    .small-hidden-list .white-list .nav-small .nav-small-list li {
+    .white-list .nav-small .nav-small-list li {
         margin-bottom: 10px;
         margin-top: 5px;
     }
-    .small-hidden-list .white-list .nav-small .nav-small-list .nested-list button {
+    .white-list .nav-small .nav-small-list .nested-list button {
         background-color: transparent;
         border: none;
         outline: 0;
@@ -568,40 +574,40 @@
         margin-right: 15px;
         margin-top: 5px;
     }
-    .small-hidden-list .white-list .nav-small .nav-small-list .nested-list i {
+    .white-list .nav-small .nav-small-list .nested-list i {
         transition: all 0.4s ease-in-out;
         margin-right: 115px;
     }
     .rotate {
         transform: rotate(180deg) translateY(-3px);
     }
-    .small-hidden-list .white-list .nav-small .nav-small-list .nested-list .nav-small-list-one {
+    .white-list .nav-small .nav-small-list .nested-list .nav-small-list-one {
         display: none;
     }
-    .small-hidden-list .white-list .nav-small .nav-small-list .nested-list .nav-small-list-one li {
-        margin-right: 30px;
+    .white-list .nav-small .nav-small-list .nested-list .nav-small-list-one li {
+        margin-right: 15px;
         color: #054f80;
         font-family: "medium";
         font-size: 14px;
     }
-    .small-hidden-list .white-list .nav-small .nav-small-list .nested-list .nav-small-list-one li a {
+    .white-list .nav-small .nav-small-list .nested-list .nav-small-list-one li a {
         color: #054f80;
         text-decoration: none;
     }
-    .small-hidden-list .white-list .nav-small .nav-small-list .nested-list .nav-small-list-one .nested-list-two .nav-small-list-two {
+    .white-list .nav-small .nav-small-list .nested-list .nav-small-list-one .nested-list-two .nav-small-list-two {
         display: none;
     }
-    .small-hidden-list .white-list .nav-small .nav-small-list .nested-list .nav-small-list-one .nested-list-one .nav-small-list-two li {
-        margin-right: 30px;
+    .white-list .nav-small .nav-small-list .nested-list .nav-small-list-one .nested-list-one .nav-small-list-two li {
+        margin-right: 15px;
     }
-    .small-hidden-list .white-list .nav-small .nav-small-list .nested-list .nav-small-list-one .nested-list-two .nested-list-two-icon {
+    .white-list .nav-small .nav-small-list .nested-list .nav-small-list-one .nested-list-two .nested-list-two-icon {
         margin-right: 100px;
     }
     .contact-small {
         font-family: "regular";
         font-size: 14px;
         color: #054f80;
-        margin-right: 30px;
+        margin-right: 27px;
     }
     .contact-small a {
         font-family: "bold";
@@ -695,6 +701,9 @@
     .small-hidden-list {
         display: none;
     }
+    .white-list {
+        display: none;
+    }
     .small-search {
         display: none;
     }
@@ -713,6 +722,9 @@
     .small-hidden-list {
         display: none;
     }
+    .white-list {
+        display: none;
+    }
     .small-search {
         display: none;
     }
@@ -728,6 +740,9 @@
         padding-left: 15px;
     }
     .small-hidden-list {
+        display: none;
+    }
+    .white-list {
         display: none;
     }
     .small-search {
