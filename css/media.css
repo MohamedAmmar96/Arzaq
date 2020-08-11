@@ -150,31 +150,6 @@
         display: none;
         overflow: auto;
     }
-    .white-list .welcome-small {
-        color: #054f80;
-        display: flex;
-        flex-direction: column;
-        padding: 0px 15px;
-        margin-bottom: 10px;
-    }
-    .white-list .welcome-small button {
-        background-color: transparent;
-        color: #054f80;
-        border: none;
-        box-shadow: none;
-        font-family: "bold";
-        font-size: 14px;
-    }
-    .white-list .welcome-small .bootstrap-select .btn {
-        outline: none !important;
-    }
-    .white-list .welcome-small .bootstrap-select .dropdown-menu>li>a {
-        padding: 8px 10px;
-        outline: none !important;
-    }
-    .welcome-small .bootstrap-select .dropdown-toggle .filter-option {
-        text-align: right;
-    }
     .white-list .nav-small {
         padding: 15px 27px 0px;
         margin-top: 30px;
@@ -230,6 +205,55 @@
     .white-list .nav-small .nav-small-list .nested-list .nav-small-list-one .nested-list-two .nested-list-two-icon {
         margin-right: 120px;
     }
+    .white-list .welcome-small {
+        color: #054f80;
+        display: flex;
+        flex-direction: column;
+        padding: 0px 15px;
+        margin-bottom: 10px;
+    }
+    .white-list .welcome-small .curr,
+    .white-list .welcome-small .lang {
+        margin-right: 13px;
+        margin-bottom: 10px;
+    }
+    .white-list .welcome-small .curr span,
+    .white-list .welcome-small .lang span {
+        font-family: "bold";
+        font-size: 14px;
+    }
+    .white-list .welcome-small .curr span a,
+    .white-list .welcome-small .lang span a {
+        color: #054f80;
+        text-decoration: none;
+    }
+    .white-list .welcome-small .curr i,
+    .white-list .welcome-small .lang i {
+        transition: all 0.4s ease-in-out;
+    }
+    .white-list .welcome-small .curr i {
+        margin-right: 175px;
+    }
+    .white-list .welcome-small .lang i {
+        margin-right: 184px;
+    }
+    .white-list .welcome-small .curr ul,
+    .white-list .welcome-small .lang ul {
+        margin-right: 15px;
+        display: none;
+    }
+    .white-list .welcome-small .curr ul li,
+    .white-list .welcome-small .lang ul li {
+        margin-bottom: 10px;
+        margin-top: 5px;
+        font-family: "medium";
+        font-size: 14px;
+    }
+    .white-list .welcome-small .curr ul li a,
+    .white-list .welcome-small .lang ul li a {
+        color: #054f80;
+        text-decoration: none;
+    }
     .contact-small {
         font-family: "regular";
         font-size: 14px;
@@ -269,13 +293,38 @@
     .small-search .small-search-content {
         position: absolute;
         top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
+        left: 75px;
+        transform: translateY(-50%);
+        width: calc(100% - 150px);
+    }
+    .small-search .small-search-content button {
+        border-radius: 35px;
+        height: 50px;
+        line-height: 35px;
+        font-size: 16px;
+    }
+    .small-search .small-search-content .btn {
+        outline: none !important;
+        box-shadow: none;
     }
     .small-search .bootstrap-select .dropdown-toggle .filter-option {
-        text-align: center;
+        text-align: right;
         color: #666;
         font-family: "bold";
+        color: #054f80;
+    }
+    .bootstrap-select .dropdown-toggle .caret {
+        right: 93.5%;
+        color: #054f80;
+    }
+    .open>.dropdown-toggle.btn-default:hover {
+        background-color: #fff;
+    }
+    .dropdown-menu>li>a {
+        color: #054f80;
+        font-family: "medium";
+        font-size: 16px;
+        padding: 6px 25px;
     }
     .small-search .small-search-content .search-bar-small {
         margin-top: 30px;
@@ -284,23 +333,27 @@
         flex-direction: row;
     }
     .small-search .small-search-content .search-bar-small input {
-        width: 250px;
-        height: 40px;
+        width: 100%;
+        height: 50px;
         border-radius: 35px;
         outline: none;
         border: none;
         text-indent: 20px;
+        font-size: 16px;
+        color: #054f80;
+        font-family: "bold";
     }
     .small-search .small-search-content .search-bar-small input::placeholder {
         text-indent: 20px;
-        font-family: "medium";
+        color: #054f80;
+        font-family: "bold";
     }
     .small-search .small-search-content .search-bar-small a {
         text-decoration: none;
         color: #054f80;
         position: absolute;
-        top: 13px;
-        left: 15px;
+        top: 17px;
+        left: 20px;
     }
     /* Hidden Footer Lists */
     footer .footer-top .colno1,
@@ -361,6 +414,47 @@
     }
     .white-list .welcome-small .hello-small p {
         order: 2;
+    }
+    .small-search .small-search-content {
+        position: absolute;
+        top: 50%;
+        left: 15px;
+        transform: translateY(-50%);
+        width: calc(100% - 30px);
+    }
+    .small-search .small-search-content button {
+        border-radius: 35px;
+        height: 50px;
+        line-height: 35px;
+        font-size: 16px;
+    }
+    .small-search .small-search-content .btn {
+        outline: none !important;
+        box-shadow: none;
+    }
+    .small-search .bootstrap-select .dropdown-toggle .filter-option {
+        text-align: right;
+        color: #666;
+        font-family: "bold";
+        color: #054f80;
+    }
+    .bootstrap-select .dropdown-toggle .caret {
+        right: 90%;
+        color: #054f80;
+    }
+    .open>.dropdown-toggle.btn-default:hover {
+        background-color: #fff;
+    }
+    .dropdown-menu>li>a {
+        color: #054f80;
+        font-family: "medium";
+    }
+    .small-search .small-search-content .search-bar-small a {
+        text-decoration: none;
+        color: #054f80;
+        position: absolute;
+        top: 17px;
+        left: 20px;
     }
 }
 
@@ -523,33 +617,8 @@
         display: none;
         overflow: auto;
     }
-    .white-list .welcome-small {
-        color: #054f80;
-        display: flex;
-        flex-direction: column;
-        padding: 0px 15px;
-        margin-bottom: 10px;
-    }
-    .white-list .welcome-small button {
-        background-color: transparent;
-        color: #054f80;
-        border: none;
-        outline: none;
-        font-family: "bold";
-        font-size: 14px;
-    }
-    .white-list .welcome-small .bootstrap-select .btn {
-        outline: none !important;
-    }
-    .white-list .welcome-small .bootstrap-select .dropdown-menu>li>a {
-        padding: 8px 10px;
-        outline: none !important;
-    }
-    .welcome-small .bootstrap-select .dropdown-toggle .filter-option {
-        text-align: right;
-    }
     .white-list .nav-small {
-        padding: 15px 27px 0;
+        padding: 15px 27px 0px;
         margin-top: 30px;
     }
     .white-list .nav-small .nav-small-list li span {
@@ -601,7 +670,56 @@
         margin-right: 15px;
     }
     .white-list .nav-small .nav-small-list .nested-list .nav-small-list-one .nested-list-two .nested-list-two-icon {
-        margin-right: 100px;
+        margin-right: 120px;
+    }
+    .white-list .welcome-small {
+        color: #054f80;
+        display: flex;
+        flex-direction: column;
+        padding: 0px 15px;
+        margin-bottom: 10px;
+    }
+    .white-list .welcome-small .curr,
+    .white-list .welcome-small .lang {
+        margin-right: 13px;
+        margin-bottom: 10px;
+    }
+    .white-list .welcome-small .curr span,
+    .white-list .welcome-small .lang span {
+        font-family: "bold";
+        font-size: 14px;
+    }
+    .white-list .welcome-small .curr span a,
+    .white-list .welcome-small .lang span a {
+        color: #054f80;
+        text-decoration: none;
+    }
+    .white-list .welcome-small .curr i,
+    .white-list .welcome-small .lang i {
+        transition: all 0.4s ease-in-out;
+    }
+    .white-list .welcome-small .curr i {
+        margin-right: 175px;
+    }
+    .white-list .welcome-small .lang i {
+        margin-right: 184px;
+    }
+    .white-list .welcome-small .curr ul,
+    .white-list .welcome-small .lang ul {
+        margin-right: 15px;
+        display: none;
+    }
+    .white-list .welcome-small .curr ul li,
+    .white-list .welcome-small .lang ul li {
+        margin-bottom: 10px;
+        margin-top: 5px;
+        font-family: "medium";
+        font-size: 14px;
+    }
+    .white-list .welcome-small .curr ul li a,
+    .white-list .welcome-small .lang ul li a {
+        color: #054f80;
+        text-decoration: none;
     }
     .contact-small {
         font-family: "regular";
@@ -642,13 +760,38 @@
     .small-search .small-search-content {
         position: absolute;
         top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
+        left: 200px;
+        transform: translateY(-50%);
+        width: calc(100% - 400px);
+    }
+    .small-search .small-search-content button {
+        border-radius: 35px;
+        height: 50px;
+        line-height: 35px;
+        font-size: 16px;
+    }
+    .small-search .small-search-content .btn {
+        outline: none !important;
+        box-shadow: none;
     }
     .small-search .bootstrap-select .dropdown-toggle .filter-option {
-        text-align: center;
+        text-align: right;
         color: #666;
         font-family: "bold";
+        color: #054f80;
+    }
+    .bootstrap-select .dropdown-toggle .caret {
+        right: 94.5%;
+        color: #054f80;
+    }
+    .open>.dropdown-toggle.btn-default:hover {
+        background-color: #fff;
+    }
+    .dropdown-menu>li>a {
+        color: #054f80;
+        font-family: "medium";
+        padding: 6px 25px;
+        font-size: 16px;
     }
     .small-search .small-search-content .search-bar-small {
         margin-top: 30px;
@@ -657,23 +800,29 @@
         flex-direction: row;
     }
     .small-search .small-search-content .search-bar-small input {
-        width: 250px;
-        height: 40px;
+        width: 100%;
+        height: 50px;
         border-radius: 35px;
         outline: none;
         border: none;
         text-indent: 20px;
+        font-family: "bold";
+        font-size: 16px;
+        color: #054f80;
     }
     .small-search .small-search-content .search-bar-small input::placeholder {
         text-indent: 20px;
         font-family: "medium";
+        font-family: "bold";
+        font-size: 16px;
+        color: #054f80;
     }
     .small-search .small-search-content .search-bar-small a {
         text-decoration: none;
         color: #054f80;
         position: absolute;
-        top: 13px;
-        left: 15px;
+        top: 17px;
+        left: 20px;
     }
     /* Hidden Footer Lists */
     footer .footer-top .colno1,

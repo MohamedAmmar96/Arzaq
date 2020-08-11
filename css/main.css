@@ -131,13 +131,17 @@ header {
     outline: 0;
     border: 1px solid #d7d7d7;
     position: relative;
-    background-color: #d7d7d7;
+    background-color: #f3f3f3;
+}
+
+.header-top .open>.dropdown-toggle.btn-default:hover {
+    background-color: #f3f3f3;
 }
 
 .header-top .search .search-bar .btn {
     line-height: 2.5;
-    color: #1a1a1a;
-    font-family: "medium";
+    color: #000;
+    font-family: "regular";
     border-top-left-radius: 0;
     border-bottom-left-radius: 0;
     outline: none !important;
@@ -153,6 +157,7 @@ header {
 .header-top .search .search-bar .dropdown-menu>li>a {
     padding: 8px 0px;
     outline: none !important;
+    font-family: "regular";
 }
 
 .header-top .search .search-bar input {
@@ -167,6 +172,7 @@ header {
 
 ::placeholder {
     text-indent: 15px;
+    color: #222;
 }
 
 .header-top .search .click-search {
@@ -642,7 +648,7 @@ header {
 .more-views .item .img-box .discount,
 .more-views .item .img-box .new {
     position: absolute;
-    top: 10px;
+    top: 20px;
     border-radius: 35px;
     text-align: center;
     font-family: "bold";
@@ -673,7 +679,7 @@ header {
     margin-bottom: 20px;
     height: 50px;
     display: block;
-    color: #777;
+    color: #1a1a1a;
     text-decoration: none;
     transition: all 0.4s ease-in-out;
 }
@@ -719,6 +725,7 @@ header {
 .more-views .item .text-box .add-to-cart {
     width: 130px;
     height: 30px;
+    font-family: "medium";
 }
 
 .more-views .item .text-box .add-to-cart i,
@@ -1131,6 +1138,8 @@ footer .footer-top .colno6 .footer-icon-list li i:hover {
 
 footer .footer-bottom .copyrights {
     margin-bottom: 15px;
+    font-family: "regular";
+    font-size: 14px;
 }
 
 footer .footer-bottom .payment-tools img {

@@ -96,6 +96,16 @@ $(document).ready(function() {
         $(".nav-small-list-two").fadeToggle(600);
     });
 
+    $(".welcome-small .curr span").click(function() {
+        $(".welcome-small .curr span i").toggleClass("rotate");
+        $(".welcome-small .curr ul").fadeToggle(600);
+    });
+
+    $(".welcome-small .lang span").click(function() {
+        $(".welcome-small .lang span i").toggleClass("rotate");
+        $(".welcome-small .lang ul").fadeToggle(600);
+    });
+
     $(".colno2 h4").click(function() {
         $(" .colno2 .footer-data-list").slideToggle(600);
     });
@@ -266,4 +276,5 @@ $(document).ready(function() {
         $(".features div").removeClass("owl-carousel");
         $(".features div .feature").removeClass("owl-carousel");
     };
+
 });
